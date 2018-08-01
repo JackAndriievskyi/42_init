@@ -1,0 +1,1 @@
+'~ / .ssh / authorized_keys' contains RSA keys that are allowed for connection via SSH. It is configured in the file '/ etc / ssh / sshd_config' under the keyword #AuthorizedKeysFile.

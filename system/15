@@ -1,0 +1,2 @@
+#!/bin/sh
+OUT="$(jobs | grep 'Running' | awk '{print $1}' | sed 's/[^0-9]//g' | head -1)" && kill %"${OUT}"

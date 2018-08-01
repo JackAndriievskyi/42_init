@@ -1,0 +1,10 @@
+#!/bin/sh
+
+LASTSUM='cat /root/crontabsave'
+NEWSUM='md5sum /etc/crontab | awk '{print $1}'
+
+if [ $LASTSUM != $NEWSUM ]
+then
+	$NEWSUM > /root/crontabsave
+	mail -s "The file crontab was modified" root@localhost.com < /etc/crontab
+fi

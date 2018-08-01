@@ -1,0 +1,2 @@
+#!/bin/sh
+route -n get -net 0.0.0.0 | awk '/gateway/{printf $2}'
